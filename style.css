@@ -43,3 +43,8 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.description{
+    font-size:2rem;
+    padding-top: 1em;
+}
