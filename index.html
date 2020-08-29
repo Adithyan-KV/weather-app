@@ -12,16 +12,21 @@
 
 <body>
     <div class="container">
-        <h1>Weather</h1>
-        <h2 class="city">City Name</h2>
-        <div class="temperature">
-            <div class="magnitude">
-                35&deg;
+        <form id='city-input'>
+            <input type='text' id='city-name' name='city' placeholder='Enter city name' autocomplete="off">
+        </form>
+        <!-- <h1>Weather</h1> -->
+        <div class="data">
+            <h2 class="city">City Name</h2>
+            <div class="temperature">
+                <div class="magnitude">
+                    T&deg;
+                </div>
+                <div class="units">C</div>
+                <div class="units">F</div>
             </div>
-            <div class="units">C</div>
-            <div class="units">F</div>
+            <div class="description">weather description</div>
         </div>
-        <div class="description">some text</div>
     </div>
 </body>
 

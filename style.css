@@ -25,26 +25,51 @@ body{
 }
 
 .temperature{
+    display:none;
+}
+
+.description{
+    display: none;
+}
+
+.city{
+    display:none;
+}
+
+.active .temperature{
     height:6rem;
     width:100%;
     display:grid;
     grid-template-columns: 70% 30%;
 }
 
-.magnitude{
+.active .magnitude{
     font-size: 6rem;
     padding:0px;
     text-align: right;
     grid-row:1/3;
 }
-.units{
+.active .units{
     font-size:2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.description{
-    font-size:2rem;
+.active .description{
+    display: block;
+    font-size:1.7rem;
     padding-top: 1em;
+}
+
+.active .city{
+    display: block;
+}
+
+input{
+    box-sizing:border-box;
+    width:100%;
+    margin: 1rem 0rem;
+    height: 2.5rem;
+    opacity: 0.4;
 }
