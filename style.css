@@ -54,6 +54,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .active .description{
@@ -64,6 +65,10 @@ body{
 
 .active .city{
     display: block;
+}
+
+.passive{
+    opacity: 0.2;
 }
 
 input{
