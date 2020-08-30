@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         event.preventDefault();
         cityInput = document.querySelector('#city-name');
+        let message = document.querySelector('.message');
+        message.classList.remove('off');
+        console.log(message.classList);
         getWeatherFor(cityInput.value);
         cityForm.reset();
 
@@ -48,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 setCity(city);
                 setTemperature(temp);
                 setWeather(weather);
+                let message = document.querySelector('.message');
+                message.classList.add('off');
+                console.log(message.classList);
                 data = document.querySelector('.data');
                 if (!data.classList.contains('active')) {
                     data.classList.add('active');

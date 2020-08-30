@@ -24,6 +24,16 @@ body{
     box-shadow: 0rem 0rem 3rem #3b4161;
 }
 
+
+.message{
+    text-shadow: none;
+    color: rgb(65, 65, 65);
+}
+
+.off{
+    opacity: 0;
+}
+
 .temperature{
     display:none;
 }
