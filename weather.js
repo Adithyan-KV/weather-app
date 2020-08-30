@@ -43,21 +43,30 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(`https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                tempKelvin = data.main.temp;
-                temp = getConvertedTemp(tempKelvin, unit);
-                let city = data.name;
-                let weather = data.weather[0].description;
-                setCity(city);
-                setTemperature(temp);
-                setWeather(weather);
+                error = document.querySelector('.error');
+                if (data.cod === 200) {
+                    console.log(data);
+                    tempKelvin = data.main.temp;
+                    temp = getConvertedTemp(tempKelvin, unit);
+                    let city = data.name;
+                    let weather = data.weather[0].description;
+                    setCity(city);
+                    setTemperature(temp);
+                    setWeather(weather);
+                    data = document.querySelector('.data');
+                    if (!data.classList.contains('active')) {
+                        data.classList.add('active');
+                    }
+                    if (!error.classList.contains("off")) {
+                        error.classList.add("off");
+                    }
+                }
+                else {
+                    console.log("couldn't fetch data");
+                    error.classList.remove("off");
+                }
                 let message = document.querySelector('.message');
                 message.classList.add('off');
-                console.log(message.classList);
-                data = document.querySelector('.data');
-                if (!data.classList.contains('active')) {
-                    data.classList.add('active');
-                }
             });
     };
 

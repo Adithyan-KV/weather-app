@@ -31,7 +31,12 @@ body{
 }
 
 .off{
-    opacity: 0;
+    display:none;
+}
+
+.error{
+    text-shadow:none;
+    color:red;
 }
 
 .temperature{
